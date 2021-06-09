@@ -1,0 +1,34 @@
+//How to Remove Duplicates from Array Without Using Java Collection API
+
+public class RemoveDuplicate{
+
+Public static void main(String[] args){
+ int input[] = { 1,2,,2,4,5,4,6}
+ Arrays.toString(removeDuplicates(input)));
+
+
+}
+public static int[] removeDuplicates(int[] numbersWithDuplicates) {
+
+        // Sorting array to bring duplicates together      
+        Arrays.sort(numbersWithDuplicates);     
+      
+        int[] result = new int[numbersWithDuplicates.length];
+        int previous = numbersWithDuplicates[0];
+        result[0] = previous;
+
+        for (int i = 1; i < numbersWithDuplicates.length; i++) {
+            int ch = numbersWithDuplicates[i];
+
+            if (previous != ch) {
+                result[i] = ch;
+            }
+            previous = ch;
+        }
+        return result;
+
+    }
+}
+
+
+Read more: https://javarevisited.blogspot.com/2014/01/how-to-remove-duplicates-from-array-java-without-collection-API.html#ixzz6xFJbBE6c
